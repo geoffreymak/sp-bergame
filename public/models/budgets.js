@@ -1,0 +1,39 @@
+const mongoose = require('mongoose');
+const { v4: uuid } = require('uuid');
+
+const budgetSchema = new mongoose.Schema(
+  {
+    compte: {
+      type: String,
+      required: true
+    },
+    intitule: {
+      type: String,
+      required: true
+    },
+    entite: {
+      type: String,
+      required: true
+    },
+    prevision: {
+      type: Number,
+      required: true
+    },
+    exercice: {
+      type: Number
+    },
+    type: {
+      type: String
+    },
+    uuid: {
+      type: String,
+      default: uuid,
+      unique: true
+    }
+  },
+  { timestamps: true }
+);
+
+const budgetModel = mongoose.model('Budget', budgetSchema);
+
+module.exports = budgetModel;

@@ -1,0 +1,2 @@
+error while generating or saving report: Error: Asset ./local-assets/electron-logo.svg not found in the store and also not on the disk: Unable to find or read file C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg. ENOENT: no such file or directory, open 'C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg'
+    at readAsset (C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets\lib\assets.js:232:15)

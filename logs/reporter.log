@@ -1,0 +1,282 @@
+2021-10-14T21:28:28.749Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-10-14T21:28:28.752Z - info: Searching for available extensions in C:\Users\gmak\Desktop\comptabilite
+2021-10-14T21:28:29.044Z - info: Extensions location cache not found, crawling directories
+2021-10-14T21:29:11.600Z - info: Found 35 extensions
+2021-10-14T21:29:16.310Z - warn: "templatingEngines.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-14T21:29:16.311Z - info: Setting http-server strategy for rendering
+2021-10-14T21:29:24.448Z - info: Using extension cli@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-cli:2.2.5
+2021-10-14T21:29:24.620Z - info: Using extension debug@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-debug:2.1.3
+2021-10-14T21:29:24.751Z - info: Using extension express@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-express:2.8.1
+2021-10-14T21:29:31.628Z - info: Using extension freeze@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-freeze:2.0.0
+2021-10-14T21:29:31.749Z - info: Using extension handlebars@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-handlebars:2.1.0
+2021-10-14T21:29:31.821Z - info: Using extension import-export@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-import-export:2.1.1
+2021-10-14T21:29:33.517Z - info: Using extension jsrender@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-jsrender:2.1.1
+2021-10-14T21:29:33.527Z - info: Using extension tags@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-tags:2.5.0
+2021-10-14T21:29:33.677Z - info: Using extension templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-templates:2.4.0
+2021-10-14T21:29:33.800Z - info: Using extension authorization@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-authorization:2.4.0
+2021-10-14T21:29:33.989Z - info: Using extension base@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-base:2.0.2
+2021-10-14T21:29:34.030Z - info: Using extension browser-client@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-browser-client:2.2.2
+2021-10-14T21:29:34.127Z - info: Using extension child-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-child-templates:1.4.0
+2021-10-14T21:29:34.477Z - info: Using extension chrome-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-chrome-pdf:1.10.0
+2021-10-14T21:29:34.692Z - warn: "chrome.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-14T21:29:35.881Z - info: Using extension data@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-data:2.4.0
+2021-10-14T21:29:35.912Z - info: Using extension docx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-docx:2.9.0
+2021-10-14T21:29:36.054Z - info: Using extension fs-store@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-fs-store:2.9.1
+2021-10-14T21:29:41.633Z - info: Using extension licensing@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-licensing:2.2.3
+2021-10-14T21:29:41.681Z - info: Using extension pdf-utils@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pdf-utils:1.10.1
+2021-10-14T21:29:46.311Z - info: Using extension pptx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pptx:0.7.0
+2021-10-14T21:29:46.353Z - info: Using extension reports@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-reports:2.5.1
+2021-10-14T21:29:46.479Z - info: Using extension static-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-static-pdf:0.4.0
+2021-10-14T21:29:46.705Z - info: Using extension studio@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio:2.10.1
+2021-10-14T21:29:47.471Z - info: Using extension text@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-text:2.0.0
+2021-10-14T21:29:47.602Z - info: Using extension version-control@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-version-control:1.6.0
+2021-10-14T21:29:51.242Z - info: Using extension assets@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets:1.7.0
+2021-10-14T21:29:51.630Z - info: Using extension html-to-xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-html-to-xlsx:2.8.3
+2021-10-14T21:30:07.347Z - info: html-to-xlsx detected chrome as available html engine
+2021-10-14T21:30:07.348Z - info: Using extension scheduling@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scheduling:2.5.0
+2021-10-14T21:30:08.421Z - info: Using extension scripts@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scripts:2.6.0
+2021-10-14T21:30:08.461Z - info: Using extension studio-theme-dark@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio-theme-dark:0.3.0
+2021-10-14T21:30:08.531Z - info: Using extension xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-xlsx:2.5.0
+2021-10-14T21:30:12.020Z - info: Using extension public-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-public-templates:2.2.0
+2021-10-14T21:30:12.107Z - info: Using extension resources@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-resources:2.1.0
+2021-10-14T21:30:12.152Z - info: Using extension sample-template@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-sample-template:2.6.1
+2021-10-14T21:30:12.196Z - info: Using fs provider for template store.
+2021-10-14T21:30:12.217Z - info: fs store is persisting using fs
+2021-10-14T21:30:12.219Z - info: fs store is synchronizing using fs
+2021-10-14T21:30:12.310Z - info: fs store is loading data
+2021-10-14T21:30:12.431Z - info: fs store is initialized successfully
+2021-10-14T21:30:12.475Z - info: Creating default express app.
+2021-10-14T21:30:14.457Z - info: jsreport server successfully started on http port: 5488
+2021-10-14T21:30:14.460Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-10-14T21:30:15.096Z - info: Verifying license key free
+2021-10-14T21:30:15.100Z - info: Using free license
+2021-10-14T21:30:15.118Z - info: reporter initialized
+2021-10-14T21:30:15.181Z - info: Starting rendering request 1 (user: null)
+2021-10-14T21:30:15.186Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2021-10-14T21:30:15.303Z - error: Rendering request 1 finished with error in 123 ms
+2021-10-14T21:30:15.309Z - error: Error when processing render request 1 Asset ./local-assets/electron-logo.svg not found in the store and also not on the disk: Unable to find or read file C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg. ENOENT: no such file or directory, open 'C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg' Error: Asset ./local-assets/electron-logo.svg not found in the store and also not on the disk: Unable to find or read file C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg. ENOENT: no such file or directory, open 'C:\Users\gmak\Desktop\comptabilite\local-assets\electron-logo.svg'
+    at readAsset (C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets\lib\assets.js:232:15)
+2021-10-14T21:32:18.372Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-10-14T21:32:18.374Z - info: Searching for available extensions in C:\Users\gmak\Desktop\comptabilite
+2021-10-14T21:32:18.446Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\gmak\Desktop\comptabilite
+2021-10-14T21:32:18.499Z - info: Found 35 extensions
+2021-10-14T21:32:18.959Z - warn: "templatingEngines.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-14T21:32:18.960Z - info: Setting http-server strategy for rendering
+2021-10-14T21:32:29.531Z - info: Using extension cli@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-cli:2.2.5
+2021-10-14T21:32:29.547Z - info: Using extension debug@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-debug:2.1.3
+2021-10-14T21:32:29.557Z - info: Using extension express@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-express:2.8.1
+2021-10-14T21:32:29.999Z - info: Using extension freeze@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-freeze:2.0.0
+2021-10-14T21:32:30.003Z - info: Using extension handlebars@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-handlebars:2.1.0
+2021-10-14T21:32:30.010Z - info: Using extension import-export@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-import-export:2.1.1
+2021-10-14T21:32:30.112Z - info: Using extension jsrender@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-jsrender:2.1.1
+2021-10-14T21:32:30.116Z - info: Using extension tags@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-tags:2.5.0
+2021-10-14T21:32:30.121Z - info: Using extension templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-templates:2.4.0
+2021-10-14T21:32:30.125Z - info: Using extension authorization@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-authorization:2.4.0
+2021-10-14T21:32:30.135Z - info: Using extension base@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-base:2.0.2
+2021-10-14T21:32:30.138Z - info: Using extension browser-client@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-browser-client:2.2.2
+2021-10-14T21:32:30.144Z - info: Using extension child-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-child-templates:1.4.0
+2021-10-14T21:32:30.160Z - info: Using extension chrome-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-chrome-pdf:1.10.0
+2021-10-14T21:32:30.172Z - warn: "chrome.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-14T21:32:30.303Z - info: Using extension data@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-data:2.4.0
+2021-10-14T21:32:30.306Z - info: Using extension docx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-docx:2.9.0
+2021-10-14T21:32:30.313Z - info: Using extension fs-store@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-fs-store:2.9.1
+2021-10-14T21:32:30.555Z - info: Using extension licensing@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-licensing:2.2.3
+2021-10-14T21:32:30.565Z - info: Using extension pdf-utils@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pdf-utils:1.10.1
+2021-10-14T21:32:30.733Z - info: Using extension pptx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pptx:0.7.0
+2021-10-14T21:32:30.741Z - info: Using extension reports@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-reports:2.5.1
+2021-10-14T21:32:30.750Z - info: Using extension static-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-static-pdf:0.4.0
+2021-10-14T21:32:30.756Z - info: Using extension studio@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio:2.10.1
+2021-10-14T21:32:30.869Z - info: Using extension text@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-text:2.0.0
+2021-10-14T21:32:30.871Z - info: Using extension version-control@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-version-control:1.6.0
+2021-10-14T21:32:31.033Z - info: Using extension assets@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets:1.7.0
+2021-10-14T21:32:31.068Z - info: Using extension html-to-xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-html-to-xlsx:2.8.3
+2021-10-14T21:32:31.618Z - info: html-to-xlsx detected chrome as available html engine
+2021-10-14T21:32:31.620Z - info: Using extension scheduling@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scheduling:2.5.0
+2021-10-14T21:32:31.689Z - info: Using extension scripts@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scripts:2.6.0
+2021-10-14T21:32:31.694Z - info: Using extension studio-theme-dark@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio-theme-dark:0.3.0
+2021-10-14T21:32:31.696Z - info: Using extension xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-xlsx:2.5.0
+2021-10-14T21:32:31.968Z - info: Using extension public-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-public-templates:2.2.0
+2021-10-14T21:32:31.975Z - info: Using extension resources@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-resources:2.1.0
+2021-10-14T21:32:31.977Z - info: Using extension sample-template@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-sample-template:2.6.1
+2021-10-14T21:32:31.981Z - info: Using fs provider for template store.
+2021-10-14T21:32:31.990Z - info: fs store is persisting using fs
+2021-10-14T21:32:31.992Z - info: fs store is synchronizing using fs
+2021-10-14T21:32:32.053Z - info: fs store is loading data
+2021-10-14T21:32:32.113Z - info: fs store is initialized successfully
+2021-10-14T21:32:32.144Z - info: Creating default express app.
+2021-10-14T21:32:32.188Z - info: jsreport server successfully started on http port: 5488
+2021-10-14T21:32:32.191Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-10-14T21:32:32.232Z - info: Verifying license key free
+2021-10-14T21:32:32.236Z - info: Using free license
+2021-10-14T21:32:32.251Z - info: reporter initialized
+2021-10-14T21:32:32.315Z - info: Starting rendering request 1 (user: null)
+2021-10-14T21:32:32.340Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2021-10-14T21:32:39.337Z - info: Rendering request 1 finished in 7023 ms
+2021-10-15T14:42:22.653Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-10-15T14:42:22.666Z - info: Searching for available extensions in C:\Users\gmak\Desktop\comptabilite
+2021-10-15T14:42:22.967Z - info: Extensions location cache C:\Users\gmak\AppData\Local\Temp\jsreport\core\locations.json contains older information, crawling
+2021-10-15T14:44:53.117Z - info: Found 35 extensions
+2021-10-15T14:45:04.951Z - warn: "templatingEngines.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T14:45:04.952Z - info: Setting http-server strategy for rendering
+2021-10-15T14:45:15.911Z - info: Using extension cli@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-cli:2.2.5
+2021-10-15T14:45:16.202Z - info: Using extension debug@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-debug:2.1.3
+2021-10-15T14:45:16.296Z - info: Using extension express@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-express:2.8.1
+2021-10-15T14:45:24.218Z - info: Using extension freeze@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-freeze:2.0.0
+2021-10-15T14:45:24.277Z - info: Using extension handlebars@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-handlebars:2.1.0
+2021-10-15T14:45:24.323Z - info: Using extension import-export@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-import-export:2.1.1
+2021-10-15T14:45:26.950Z - info: Using extension jsrender@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-jsrender:2.1.1
+2021-10-15T14:45:26.981Z - info: Using extension tags@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-tags:2.5.0
+2021-10-15T14:45:27.051Z - info: Using extension templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-templates:2.4.0
+2021-10-15T14:45:27.099Z - info: Using extension authorization@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-authorization:2.4.0
+2021-10-15T14:45:27.224Z - info: Using extension base@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-base:2.0.2
+2021-10-15T14:45:27.249Z - info: Using extension browser-client@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-browser-client:2.2.2
+2021-10-15T14:45:27.382Z - info: Using extension child-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-child-templates:1.4.0
+2021-10-15T14:45:27.685Z - info: Using extension chrome-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-chrome-pdf:1.10.0
+2021-10-15T14:45:27.901Z - warn: "chrome.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T14:45:31.422Z - info: Using extension data@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-data:2.4.0
+2021-10-15T14:45:31.471Z - info: Using extension docx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-docx:2.9.0
+2021-10-15T14:45:31.612Z - info: Using extension fs-store@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-fs-store:2.9.1
+2021-10-15T14:45:37.164Z - info: Using extension licensing@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-licensing:2.2.3
+2021-10-15T14:45:37.258Z - info: Using extension pdf-utils@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pdf-utils:1.10.1
+2021-10-15T14:45:40.962Z - info: Using extension pptx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pptx:0.7.0
+2021-10-15T14:45:41.055Z - info: Using extension reports@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-reports:2.5.1
+2021-10-15T14:45:41.185Z - info: Using extension static-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-static-pdf:0.4.0
+2021-10-15T14:45:41.369Z - info: Using extension studio@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio:2.10.1
+2021-10-15T14:45:42.339Z - info: Using extension text@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-text:2.0.0
+2021-10-15T14:45:42.367Z - info: Using extension version-control@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-version-control:1.6.0
+2021-10-15T14:45:46.886Z - info: Using extension assets@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets:1.7.0
+2021-10-15T14:45:47.273Z - info: Using extension html-to-xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-html-to-xlsx:2.8.3
+2021-10-15T14:46:01.390Z - info: html-to-xlsx detected chrome as available html engine
+2021-10-15T14:46:01.393Z - info: Using extension scheduling@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scheduling:2.5.0
+2021-10-15T14:46:02.569Z - info: Using extension scripts@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scripts:2.6.0
+2021-10-15T14:46:02.619Z - info: Using extension studio-theme-dark@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio-theme-dark:0.3.0
+2021-10-15T14:46:02.674Z - info: Using extension xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-xlsx:2.5.0
+2021-10-15T14:46:08.799Z - info: Using extension public-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-public-templates:2.2.0
+2021-10-15T14:46:09.244Z - info: Using extension resources@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-resources:2.1.0
+2021-10-15T14:46:09.320Z - info: Using extension sample-template@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-sample-template:2.6.1
+2021-10-15T14:46:09.369Z - info: Using fs provider for template store.
+2021-10-15T14:46:09.395Z - info: fs store is persisting using fs
+2021-10-15T14:46:09.402Z - info: fs store is synchronizing using fs
+2021-10-15T14:46:09.739Z - info: fs store is loading data
+2021-10-15T14:46:09.890Z - info: fs store is initialized successfully
+2021-10-15T14:46:09.915Z - info: Creating default express app.
+2021-10-15T14:46:11.279Z - info: jsreport server successfully started on http port: 5488
+2021-10-15T14:46:11.395Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-10-15T14:46:12.542Z - info: Verifying license key free
+2021-10-15T14:46:12.594Z - info: Using free license
+2021-10-15T14:46:12.739Z - info: reporter initialized
+2021-10-15T14:46:12.778Z - info: Starting rendering request 1 (user: null)
+2021-10-15T14:46:12.781Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2021-10-15T14:46:29.513Z - info: Rendering request 1 finished in 16735 ms
+2021-10-15T14:50:01.174Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-10-15T14:50:01.176Z - info: Searching for available extensions in C:\Users\gmak\Desktop\comptabilite
+2021-10-15T14:50:01.223Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\gmak\Desktop\comptabilite
+2021-10-15T14:50:01.275Z - info: Found 35 extensions
+2021-10-15T14:50:01.720Z - warn: "templatingEngines.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T14:50:01.721Z - info: Setting http-server strategy for rendering
+2021-10-15T14:50:08.730Z - info: Using extension cli@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-cli:2.2.5
+2021-10-15T14:50:08.742Z - info: Using extension debug@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-debug:2.1.3
+2021-10-15T14:50:08.751Z - info: Using extension express@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-express:2.8.1
+2021-10-15T14:50:09.075Z - info: Using extension freeze@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-freeze:2.0.0
+2021-10-15T14:50:09.080Z - info: Using extension handlebars@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-handlebars:2.1.0
+2021-10-15T14:50:09.087Z - info: Using extension import-export@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-import-export:2.1.1
+2021-10-15T14:50:09.221Z - info: Using extension jsrender@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-jsrender:2.1.1
+2021-10-15T14:50:09.227Z - info: Using extension tags@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-tags:2.5.0
+2021-10-15T14:50:09.234Z - info: Using extension templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-templates:2.4.0
+2021-10-15T14:50:09.242Z - info: Using extension authorization@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-authorization:2.4.0
+2021-10-15T14:50:09.260Z - info: Using extension base@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-base:2.0.2
+2021-10-15T14:50:09.268Z - info: Using extension browser-client@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-browser-client:2.2.2
+2021-10-15T14:50:09.280Z - info: Using extension child-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-child-templates:1.4.0
+2021-10-15T14:50:09.311Z - info: Using extension chrome-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-chrome-pdf:1.10.0
+2021-10-15T14:50:09.332Z - warn: "chrome.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T14:50:09.473Z - info: Using extension data@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-data:2.4.0
+2021-10-15T14:50:09.477Z - info: Using extension docx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-docx:2.9.0
+2021-10-15T14:50:09.486Z - info: Using extension fs-store@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-fs-store:2.9.1
+2021-10-15T14:50:09.741Z - info: Using extension licensing@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-licensing:2.2.3
+2021-10-15T14:50:09.747Z - info: Using extension pdf-utils@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pdf-utils:1.10.1
+2021-10-15T14:50:09.902Z - info: Using extension pptx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pptx:0.7.0
+2021-10-15T14:50:09.910Z - info: Using extension reports@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-reports:2.5.1
+2021-10-15T14:50:09.918Z - info: Using extension static-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-static-pdf:0.4.0
+2021-10-15T14:50:09.924Z - info: Using extension studio@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio:2.10.1
+2021-10-15T14:50:10.019Z - info: Using extension text@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-text:2.0.0
+2021-10-15T14:50:10.026Z - info: Using extension version-control@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-version-control:1.6.0
+2021-10-15T14:50:10.210Z - info: Using extension assets@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets:1.7.0
+2021-10-15T14:50:10.248Z - info: Using extension html-to-xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-html-to-xlsx:2.8.3
+2021-10-15T14:50:10.860Z - info: html-to-xlsx detected chrome as available html engine
+2021-10-15T14:50:10.862Z - info: Using extension scheduling@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scheduling:2.5.0
+2021-10-15T14:50:10.932Z - info: Using extension scripts@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scripts:2.6.0
+2021-10-15T14:50:10.937Z - info: Using extension studio-theme-dark@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio-theme-dark:0.3.0
+2021-10-15T14:50:10.940Z - info: Using extension xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-xlsx:2.5.0
+2021-10-15T14:50:11.198Z - info: Using extension public-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-public-templates:2.2.0
+2021-10-15T14:50:11.206Z - info: Using extension resources@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-resources:2.1.0
+2021-10-15T14:50:11.209Z - info: Using extension sample-template@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-sample-template:2.6.1
+2021-10-15T14:50:11.213Z - info: Using fs provider for template store.
+2021-10-15T14:50:11.224Z - info: fs store is persisting using fs
+2021-10-15T14:50:11.226Z - info: fs store is synchronizing using fs
+2021-10-15T14:50:11.283Z - info: fs store is loading data
+2021-10-15T14:50:11.361Z - info: fs store is initialized successfully
+2021-10-15T14:50:11.398Z - info: Creating default express app.
+2021-10-15T14:50:11.447Z - info: jsreport server successfully started on http port: 5488
+2021-10-15T14:50:11.450Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-10-15T14:50:11.498Z - info: Verifying license key free
+2021-10-15T14:50:11.509Z - info: Using free license
+2021-10-15T14:50:11.555Z - info: reporter initialized
+2021-10-15T14:50:11.606Z - info: Starting rendering request 1 (user: null)
+2021-10-15T14:50:11.612Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2021-10-15T14:50:14.211Z - info: Rendering request 1 finished in 2604 ms
+2021-10-15T15:15:32.961Z - info: Initializing jsreport@2.11.0 in development mode using configuration file: jsreport.config.json
+2021-10-15T15:15:32.967Z - info: Searching for available extensions in C:\Users\gmak\Desktop\comptabilite
+2021-10-15T15:15:33.160Z - info: Extensions location cache contains up to date information, skipping crawling in C:\Users\gmak\Desktop\comptabilite
+2021-10-15T15:15:33.255Z - info: Found 35 extensions
+2021-10-15T15:15:39.217Z - warn: "templatingEngines.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T15:15:39.218Z - info: Setting http-server strategy for rendering
+2021-10-15T15:15:46.565Z - info: Using extension cli@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-cli:2.2.5
+2021-10-15T15:15:46.620Z - info: Using extension debug@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-debug:2.1.3
+2021-10-15T15:15:46.653Z - info: Using extension express@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-express:2.8.1
+2021-10-15T15:15:49.392Z - info: Using extension freeze@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-freeze:2.0.0
+2021-10-15T15:15:49.416Z - info: Using extension handlebars@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-handlebars:2.1.0
+2021-10-15T15:15:49.468Z - info: Using extension import-export@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-import-export:2.1.1
+2021-10-15T15:15:50.114Z - info: Using extension jsrender@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-jsrender:2.1.1
+2021-10-15T15:15:50.121Z - info: Using extension tags@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-tags:2.5.0
+2021-10-15T15:15:50.149Z - info: Using extension templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-templates:2.4.0
+2021-10-15T15:15:50.178Z - info: Using extension authorization@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-authorization:2.4.0
+2021-10-15T15:15:50.249Z - info: Using extension base@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-base:2.0.2
+2021-10-15T15:15:50.265Z - info: Using extension browser-client@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-browser-client:2.2.2
+2021-10-15T15:15:50.302Z - info: Using extension child-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-child-templates:1.4.0
+2021-10-15T15:15:50.370Z - info: Using extension chrome-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-chrome-pdf:1.10.0
+2021-10-15T15:15:50.428Z - warn: "chrome.timeout" configuration is deprecated and will be removed in the future, please use "reportTimeout" instead
+2021-10-15T15:15:51.348Z - info: Using extension data@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-data:2.4.0
+2021-10-15T15:15:51.359Z - info: Using extension docx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-docx:2.9.0
+2021-10-15T15:15:51.397Z - info: Using extension fs-store@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-fs-store:2.9.1
+2021-10-15T15:15:53.242Z - info: Using extension licensing@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-licensing:2.2.3
+2021-10-15T15:15:53.268Z - info: Using extension pdf-utils@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pdf-utils:1.10.1
+2021-10-15T15:15:54.880Z - info: Using extension pptx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-pptx:0.7.0
+2021-10-15T15:15:54.933Z - info: Using extension reports@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-reports:2.5.1
+2021-10-15T15:15:54.998Z - info: Using extension static-pdf@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-static-pdf:0.4.0
+2021-10-15T15:15:55.065Z - info: Using extension studio@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio:2.10.1
+2021-10-15T15:15:55.892Z - info: Using extension text@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-text:2.0.0
+2021-10-15T15:15:55.904Z - info: Using extension version-control@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-version-control:1.6.0
+2021-10-15T15:15:56.911Z - info: Using extension assets@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-assets:1.7.0
+2021-10-15T15:15:57.156Z - info: Using extension html-to-xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-html-to-xlsx:2.8.3
+2021-10-15T15:16:02.038Z - info: html-to-xlsx detected chrome as available html engine
+2021-10-15T15:16:02.041Z - info: Using extension scheduling@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scheduling:2.5.0
+2021-10-15T15:16:02.558Z - info: Using extension scripts@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-scripts:2.6.0
+2021-10-15T15:16:02.585Z - info: Using extension studio-theme-dark@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-studio-theme-dark:0.3.0
+2021-10-15T15:16:02.600Z - info: Using extension xlsx@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-xlsx:2.5.0
+2021-10-15T15:16:04.618Z - info: Using extension public-templates@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-public-templates:2.2.0
+2021-10-15T15:16:04.695Z - info: Using extension resources@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-resources:2.1.0
+2021-10-15T15:16:04.717Z - info: Using extension sample-template@local:C:\Users\gmak\Desktop\comptabilite\node_modules\jsreport-sample-template:2.6.1
+2021-10-15T15:16:04.736Z - info: Using fs provider for template store.
+2021-10-15T15:16:04.772Z - info: fs store is persisting using fs
+2021-10-15T15:16:04.778Z - info: fs store is synchronizing using fs
+2021-10-15T15:16:04.871Z - info: fs store is loading data
+2021-10-15T15:16:04.949Z - info: fs store is initialized successfully
+2021-10-15T15:16:04.981Z - info: Creating default express app.
+2021-10-15T15:16:05.658Z - info: jsreport server successfully started on http port: 5488
+2021-10-15T15:16:05.666Z - info: fs store emits sockets to synchronize underlying changes with studio
+2021-10-15T15:16:05.904Z - info: Verifying license key free
+2021-10-15T15:16:05.912Z - info: Using free license
+2021-10-15T15:16:05.939Z - info: reporter initialized
+2021-10-15T15:16:06.168Z - info: Starting rendering request 1 (user: null)
+2021-10-15T15:16:06.176Z - info: Rendering anonymous template { recipe: chrome-pdf, engine: handlebars }
+2021-10-15T15:16:13.958Z - info: Rendering request 1 finished in 7791 ms

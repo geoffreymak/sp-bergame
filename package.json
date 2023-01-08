@@ -1,0 +1,124 @@
+{
+  "name": "Bergame",
+  "author": "GeoffreyMak",
+  "email": "geoffreymakia@gmail.com",
+  "licence": "MIT",
+  "homepage": "./",
+  "version": "1.2.1",
+  "description": "Logiciel de comptabilite des la communaute des soeurs de pauvre de bergame",
+  "private": false,
+  "main": "public/electron.js",
+  "build": {
+    "appId": "com.bergam.compta",
+    "productName": "S.P Bergame Compta",
+    "copyright": "Copyright © 2021 GeoffreyMak",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "public/**/*"
+    ],
+    "win": {
+      "icon": "./public/images/icons/bergame.png"
+    },
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "scripts": {
+    "eslint": "eslint ./src",
+    "eslint-fix": "eslint --fix ./src",
+    "start": "react-scripts --max_old_space_size=8192 start",
+    "react-build": "react-scripts --max_old_space_size=8192 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint ./",
+    "lint-fix": "eslint ./ --fix",
+    "electron-dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron": "wait-on tcp:3000 && electron .",
+    "electron-rel": "electron .",
+    "electron-build": "electron-builder",
+    "electron-pack": "electron-builder --em.main=electron/main.js",
+    "release": "yarn react-build && electron-builder --publish=always",
+    "build": "yarn react-build && yarn electron-build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@date-io/moment": "^2.11.0",
+    "@electron/remote": "^2.0.1",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@grapecity/activereports": "^3.0.1",
+    "@grapecity/activereports-localization": "^3.0.0",
+    "@grapecity/activereports-react": "^3.0.1",
+    "@material-ui/core": "^5.0.0-beta.5",
+    "@material-ui/icons": "^5.0.0-beta.5",
+    "@material-ui/styles": "^5.0.0-beta.5",
+    "@mui/icons-material": "^5.0.4",
+    "@mui/lab": "^5.0.0-alpha.50",
+    "@mui/material": "^5.0.3",
+    "@mui/styles": "^5.0.1",
+    "@mui/x-data-grid": "^5.0.0-beta.7",
+    "@reduxjs/toolkit": "^1.6.2",
+    "chart.js": "^3.5.1",
+    "chromium": "^3.0.2",
+    "clsx": "^1.1.1",
+    "custom-electron-titlebar": "^3.2.7",
+    "date-fns": "^2.25.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-pdf-window": "^1.0.12",
+    "formik": "^2.1.5",
+    "history": "^5.0.0",
+    "jsreport": "^2.11.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.10",
+    "nprogress": "^0.2.0",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "puppeteer-core": "^10.4.0",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^3.0.4",
+    "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.4",
+    "react-feather": "^2.0.8",
+    "react-helmet": "^6.1.0",
+    "react-imask": "^6.2.2",
+    "react-number-format": "^4.7.3",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-redux": "^7.2.5",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "^4.0.3",
+    "react-virtualized": "^9.22.3",
+    "react-window": "^1.8.6",
+    "string-minify": "^1.0.1",
+    "styled-components": "^5.3.3",
+    "uuid": "^8.3.0",
+    "uuidv4": "^6.2.12",
+    "web-vitals": "^0.2.4",
+    "xlsx": "^0.18.2",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "cross-env": "^7.0.3",
+    "electron": "^11.2.1",
+    "electron-builder": "^22.13.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "wait-on": "^6.0.0"
+  }
+}
