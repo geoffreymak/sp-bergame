@@ -28,12 +28,13 @@ require('@electron/remote/main').initialize();
 
 async function dbConnect() {
   await mongoose.connect(
-    'mongodb://admin2:ndandani721@localhost:27017/bergame?authSource=admin',
+    'mongodb+srv://gmak:ndandani721@cluster0.jehisqu.mongodb.net/compta',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true
     }
   );
+  console.log('connected');
 }
 
 dbConnect().catch((err) => console.log(err));
@@ -55,7 +56,7 @@ function createWindow() {
   });
   win.loadURL(
     isDev
-      ? `file://${path.join(__dirname, '../build/index.html')}`
+      ? 'http://localhost:3000'
       : `file://${path.join(__dirname, '../build/index.html')}`
   );
   // Open the DevTools.

@@ -7,6 +7,7 @@ import moment from 'moment';
 
 // eslint-disable-next-line import/named
 import { getCurrency } from '../utils/comptes';
+import { v4 } from 'uuid';
 
 const { ipcRenderer } = window.require('electron');
 
@@ -18,9 +19,43 @@ export default function useWriting() {
 
   // const site = useSelector((state) => state.site.data);
 
+  const removeWriting = (payload) => {
+    setWritings(
+      writings.filter(
+        (w) => w.uuid !== payload && w.id !== payload && w.piece !== payload
+      )
+    );
+  };
+
   //  { taux,user}
+  const addOneWriting = (writing) => {
+    const data = {
+      id: v4(),
+      date: moment(writing.date).format(),
+      piece: writing.piece,
+      compte: `${writing.codeCompte}${writing.compte?.compte}`,
+      compte_code: writing.compte?.compte,
+      imputation: `${writing.codeImputation}${writing.imputation?.compte}`,
+      imputation_code: writing.imputation?.compte,
+      libelle: writing.libelle,
+      devise: writing.devise,
+      taux: writing.taux,
+      parite: writing.parite,
+      montant_usd: writing.montantUSD || 0,
+      montant_cdf: writing.montantCDF || 0,
+      montant_eur: writing.montantEUR || 0,
+      montant_total_eur: writing.EUR,
+      user: user?.username,
+      exercice: exercices[0]?.code,
+      type: writing.type
+    };
+
+    setWritings([...writings, data]);
+  };
+
   const addWriting = (writing) => {
     const data1 = {
+      id: v4(),
       date: moment(writing.date).format(),
       piece: writing.piece,
       compte: `${writing.codeCompte}${writing.compte?.compte}`,
@@ -56,6 +91,7 @@ export default function useWriting() {
     let formatedData = [];
     writings.forEach((writing) => {
       const data1 = {
+        uuid: v4(),
         date: moment(writing.date).format(),
         piece: writing.piece,
         compte: `${writing.codeCompte}${writing.compte?.compte}`,
@@ -77,6 +113,7 @@ export default function useWriting() {
 
       const data2 = {
         ...data1,
+        uuid: v4(),
         compte: `${writing.codeImputation}${writing.imputation?.compte}`,
         compte_code: writing.imputation?.compte,
         imputation: `${writing.codeCompte}${writing.compte?.compte}`,
@@ -125,6 +162,8 @@ export default function useWriting() {
   return {
     writings,
     addWriting,
+    removeWriting,
+    addOneWriting,
     // addVariousWriting,
     setManyWriting,
     cleardWriting,

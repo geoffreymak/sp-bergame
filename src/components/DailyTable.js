@@ -65,7 +65,7 @@ const getDevise = (devise) => {
 const DailyTable = (props) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const { writings } = props;
+  const { writings, onRowDoubleClick } = props;
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -73,6 +73,10 @@ const DailyTable = (props) => {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
+  };
+
+  const handleRowDoubleClick = (row) => {
+    onRowDoubleClick(row);
   };
 
   const emptyRows =
@@ -102,6 +106,7 @@ const DailyTable = (props) => {
                 <StyledTableRow
                   key={idx.toString()}
                   hover
+                  onDoubleClick={() => handleRowDoubleClick(row)}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   style={{
                     minHeight: 30 * 5
@@ -167,7 +172,6 @@ const DailyTable = (props) => {
             <TableRow>
               <StyledTableCell rowSpan={4} colSpan={6} />
               <StyledTableCell rowSpan={4} align="center">
-                {' '}
                 <Stack spacing={1} justifyContent="end">
                   <Typography
                     variant="overline"

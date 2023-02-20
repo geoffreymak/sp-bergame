@@ -1,5 +1,4 @@
 /* eslint-disable operator-linebreak */
-import { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { Box, Container } from '@material-ui/core';
 // import DailyToolbar from '../components/DailyToolbar';
@@ -8,29 +7,15 @@ import DailyTable from '../components/DailyTable';
 import useWriting from '../hooks/useWriting';
 // import customers from '../__mocks__/customers';
 
-const VariousDaily = () => {
-  const [writing, setWriting] = useState(null);
+const CorrectionJournal = () => {
   // eslint-disable-next-line object-curly-newline
-  const {
-    writings,
-    addWriting,
-    removeWriting,
-    setManyWriting,
-    cleardWriting,
-    saveWriting,
-    addOneWriting
-  } = useWriting();
-
-  const handleRowDoubleClick = (row) => {
-    console.log('row', row);
-    setWriting(row);
-    removeWriting(row?.id);
-  };
+  const { writings, addWriting, setManyWriting, cleardWriting, saveWriting } =
+    useWriting();
 
   return (
     <>
       <Helmet>
-        <title>Journal des operations diverses</title>
+        <title>Journal des corrections</title>
       </Helmet>
       <Box
         sx={{
@@ -40,12 +25,9 @@ const VariousDaily = () => {
       >
         <Container maxWidth={false}>
           <DailyToolbarV2
-            title="Journal des operations diverses"
+            title="Journal des corrections"
             needJournal
             addWriting={addWriting}
-            addOneWriting={addOneWriting}
-            writing={writing}
-            setWriting={setWriting}
             writings={writings}
             category="VARIOUS"
             setManyWriting={setManyWriting}
@@ -53,10 +35,7 @@ const VariousDaily = () => {
             saveWriting={saveWriting}
           />
           <Box sx={{ pt: 3 }}>
-            <DailyTable
-              writings={writings}
-              onRowDoubleClick={handleRowDoubleClick}
-            />
+            <DailyTable writings={writings} />
           </Box>
         </Container>
       </Box>
@@ -64,4 +43,4 @@ const VariousDaily = () => {
   );
 };
 
-export default VariousDaily;
+export default CorrectionJournal;

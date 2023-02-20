@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet';
-// import Stack from '@mui/material/Stack';
+import Stack from '@mui/material/Stack';
 import ReportList from '../components/report/ReportList';
 
 const Report = () => (
@@ -7,7 +7,18 @@ const Report = () => (
     <Helmet>
       <title>Rapports</title>
     </Helmet>
-    <ReportList />
+    <Stack
+      sx={{
+        minHeight: '100%',
+        py: 3
+      }}
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Stack>
+        <ReportList />
+      </Stack>
+    </Stack>
   </>
 );
 

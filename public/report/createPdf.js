@@ -5,6 +5,7 @@ const isDev = require('electron-is-dev');
 const pdfOptions = require('../config/pdf');
 const reader = require('xlsx');
 const path = require('path');
+const url = require('url')
 const CWD = process.cwd();
 
 // Build paths
@@ -14,6 +15,7 @@ async function setBrowser() {
   const executablePath = isDev
     ? chromium.path
     : chromium.path.replace('app.asar', 'app.asar.unpacked');
+  
   const browser = await puppeteer.launch({
     headless: true,
     executablePath,
@@ -32,7 +34,8 @@ const printPdf = async (data) => {
   const page = await browser.newPage();
   console.log('Ending: Page Process, Kindly wait ..');
   /* 2- Will open our generated `.html` file in the new Page instance. */
-  await page.goto(buildPathHtml, { waitUntil: 'networkidle0', timeout: 0 });
+    console.log("buildPathHtml",url.pathToFileURL(buildPathHtml).href);
+  await page.goto(url.pathToFileURL(buildPathHtml).href, { waitUntil: 'networkidle0', timeout: 0 });
   console.log('Ending: Load Page Process, Kindly wait ..');
   /* 3- Take a snapshot of the PDF */
 

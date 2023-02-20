@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Accounts from './pages/Accounts';
 import CashDaily from './pages/CashDaily';
 import VariousDaily from './pages/VariousDaily';
+import CorrectionJournal from './pages/CorrectionJournal';
 import Budget from './pages/Budget';
 import Daily from './pages/Daily';
 import Home from './pages/Home';
@@ -113,6 +114,13 @@ const Routes = () => {
       />
 
       <RouteWithLayout
+        component={CorrectionJournal}
+        exact
+        layout={DashboardLayout}
+        path="/app/correction-daily"
+      />
+
+      <RouteWithLayout
         component={Daily}
         exact
         layout={DashboardLayout}
@@ -136,7 +144,7 @@ const Routes = () => {
       <RouteWithLayout
         component={Report}
         exact
-        layout={MainLayout}
+        layout={DashboardLayout}
         path="/app/report"
       />
       <RouteWithLayout

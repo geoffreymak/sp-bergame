@@ -3,15 +3,15 @@ import React, { useState, useCallback, useEffect } from 'react';
 
 import { Box, Button, Card, CardContent, CardHeader } from '@material-ui/core';
 
-import '@grapecity/activereports/styles/ar-js-viewer.css';
-import {} from '@grapecity/activereports-localization';
-import { Viewer } from '@grapecity/activereports-react';
-import {
-  PdfExport,
-  HtmlExport,
-  XlsxExport,
-  Core
-} from '@grapecity/activereports';
+// import '@grapecity/activereports/styles/ar-js-viewer.css';
+// import {} from '@grapecity/activereports-localization';
+// import { Viewer } from '@grapecity/activereports-react';
+// import {
+//   PdfExport,
+//   HtmlExport,
+//   XlsxExport,
+//   Core
+// } from '@grapecity/activereports';
 
 import Checkbox from '@mui/material/Checkbox';
 import Radio from '@mui/material/Radio';

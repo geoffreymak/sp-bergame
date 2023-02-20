@@ -123,7 +123,9 @@ const events = () => {
 
   ipcMain.handle('get-users', async (event, data) => {
     try {
+      console.log('get-users');
       const usersData = await userModel.find().sort({ username: 1 }).lean();
+      console.log('get-users', JSON.stringify(usersData));
       return {
         error: false,
         data: JSON.stringify(usersData)
@@ -249,6 +251,7 @@ const events = () => {
       const clearData = await getData(data);
       if (clearData) {
         const pdfPath = await createReport({ ...data, data: clearData });
+        console.log("pdfPath",pdfPath)
         const win = new BrowserWindow({
           width: 1024,
           height: 800,
@@ -262,14 +265,14 @@ const events = () => {
             plugins: true
           }
         });
-        win.loadURL(pdfPath);
+        win.loadURL(url.pathToFileURL(pdfPath).href);
         win.menuBarVisible = false;
         win.webContents.on('did-finish-load', () => {
           if (win) {
             win.title = data.title;
           }
         });
-        return { error: false, data: pdfPath };
+        return { error: false, data: url.pathToFileURL(pdfPath).href };
         // event.reply('print-success', pdfPath);
       }
     } catch (error) {

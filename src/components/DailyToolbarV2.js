@@ -263,6 +263,22 @@ const getDevise = (devise) => {
   }
 };
 
+const getMontant = (euro, devise, taux, parite) => {
+  let curTaux = 1;
+
+  switch (devise) {
+    case 'cdf':
+      curTaux = taux;
+      break;
+    case 'usd':
+      curTaux = parite;
+      break;
+    default:
+      break;
+  }
+  return euro * curTaux;
+};
+
 const DailyToolbarV2 = (props) => {
   const [date, setDate] = useState(null);
   const [piece, setPiece] = useState('');
@@ -312,11 +328,48 @@ const DailyToolbarV2 = (props) => {
     filters,
     needJournal,
     writings,
+    writing,
+    setWriting,
     addWriting,
     setManyWriting,
     cleardWriting,
-    saveWriting
+    saveWriting,
+    addOneWriting
   } = props;
+
+  React.useEffect(() => {
+    if (writing) {
+      const {
+        date,
+        piece,
+        compte,
+        compte_code,
+        imputation,
+        imputation_code,
+        libelle,
+        devise,
+        taux,
+        parite,
+        montant_usd,
+        montant_cdf,
+        montant_eur,
+        montant_total_eur,
+        type
+      } = writing;
+      setDate(moment(date));
+      setPiece(piece);
+      setParite(parite);
+      setTaux(taux);
+      setCodeCompte(compte.substr(0, 2));
+      setCompte(comptes.find((c) => c.compte === compte_code));
+      setCodeImputation(imputation.substr(0, 2));
+      setImputation(comptes.find((c) => c.compte === imputation_code));
+      setType(type);
+      setDevise(devise);
+      setMontant(getMontant(montant_total_eur, devise, taux, parite));
+      setLibelle(libelle);
+    }
+  }, [writing]);
 
   const montants = useMemo(() => {
     let montantUSD = 0;
@@ -367,7 +420,9 @@ const DailyToolbarV2 = (props) => {
       !parite ||
       !taux ||
       !codeCompte ||
+      (codeCompte && codeCompte.length < 2) ||
       !codeImputation ||
+      (codeImputation && codeImputation.length < 2) ||
       !montant
     );
   }, [
@@ -398,6 +453,7 @@ const DailyToolbarV2 = (props) => {
     );
     setCompte(null);
     setImputation(null);
+    setWriting(null);
     setLibelle('');
     setMontant('');
     setCodeImputation('');
@@ -497,6 +553,12 @@ const DailyToolbarV2 = (props) => {
       libelle,
       ...montants
     };
+
+    /* if (writing) {
+      addOneWriting(data);
+    } else {
+      addWriting(data);
+    } */
     addWriting(data);
     handleClear();
   }, [
@@ -514,7 +576,8 @@ const DailyToolbarV2 = (props) => {
     libelle,
     isInValid,
     hasValidDate,
-    handleClear
+    handleClear,
+    writing
   ]);
 
   const handleSaveWrittings = useCallback(async () => {

@@ -22,6 +22,7 @@ import ClosedCaptionOutlinedIcon from '@mui/icons-material/ClosedCaptionOutlined
 import TableViewOutlinedIcon from '@mui/icons-material/TableViewOutlined';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
+import ErrorOutlineOutlinedIcon from '@mui/icons-material/ErrorOutlineOutlined';
 
 import { useSelector } from 'react-redux';
 
@@ -48,6 +49,11 @@ const items = [
     href: '/app/various-daily',
     icon: SyncAltOutlinedIcon,
     title: 'Operations diverse'
+  },
+  {
+    href: '/app/correction-daily',
+    icon: ErrorOutlineOutlinedIcon,
+    title: 'Corrections'
   },
   // {
   //   href: '/register',
