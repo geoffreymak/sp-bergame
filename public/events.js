@@ -260,7 +260,10 @@ const events = () => {
 
         const budgetsData = await budgetModel.find().sort({ compte: 1 }).lean();
         await pastBudgetModel.insertMany(budgetsData);
-        await budgetModel.deleteMany({});
+        await budgetModel.updateMany(
+          {},
+          { exercice: exerciceData[0].code + 1 }
+        );
 
         const result = await exerciceModel.create({
           code: exerciceData[0].code + 1,
