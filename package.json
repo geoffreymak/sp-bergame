@@ -17,8 +17,12 @@
       "node_modules/**/*",
       "public/**/*"
     ],
+    "extraFiles": [
+      "config/**/*"
+    ],
     "win": {
-      "icon": "./public/images/icons/bergame.png"
+      "icon": "./public/images/icons/bergame.png",
+      "target": "nsis"
     },
     "directories": {
       "buildResources": "public"

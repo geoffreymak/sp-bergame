@@ -25,15 +25,24 @@ const events = require('./events');
 require('@electron/remote/main').initialize();
 
 // 'mongodb://cvm:cvmdb@localhost:27017/compta?authSource=compta'
+// 'mongodb+srv://gmak:ndandani721@cluster0.jehisqu.mongodb.net/compta'
+const dbConfig = fs.readFileSync(
+  path.resolve(path.join(CWD, 'config', 'dbConfig.json')),
+  {
+    encoding: 'utf-8',
+    flag: 'as+'
+  }
+);
+
+const dbConfigObject = JSON.parse(dbConfig || '{"local": ""}');
 
 async function dbConnect() {
-  await mongoose.connect(
-    'mongodb+srv://gmak:ndandani721@cluster0.jehisqu.mongodb.net/compta',
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    }
-  );
+  const URI = dbConfigObject.local;
+
+  await mongoose.connect(URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
   console.log('connected');
 }
 
