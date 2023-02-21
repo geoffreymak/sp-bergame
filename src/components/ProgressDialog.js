@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable react/jsx-one-expression-per-line */
@@ -33,9 +34,11 @@ function ProgressDialog(props) {
             spacing={5}
           >
             <Typography>{title ? title : 'Affichage du rapport'}</Typography>
-            <IconButton onClick={onClose}>
-              <CloseIcon />
-            </IconButton>
+            {onClose && (
+              <IconButton onClick={onClose}>
+                <CloseIcon />
+              </IconButton>
+            )}
           </Stack>
         </DialogTitle>
         <DialogContent>
@@ -53,7 +56,6 @@ function ProgressDialog(props) {
 
 ProgressDialog.propTypes = {
   open: PropTypes.bool,
-  onClose: PropTypes.func,
   title: PropTypes.string
 };
 

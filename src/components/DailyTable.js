@@ -107,7 +107,11 @@ const DailyTable = (props) => {
                   key={idx.toString()}
                   hover
                   onDoubleClick={() => handleRowDoubleClick(row)}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  sx={{
+                    '&:last-child td, &:last-child th': { border: 0 },
+                    cursor: 'pointer',
+                    userSelect: 'none'
+                  }}
                   style={{
                     minHeight: 30 * 5
                   }}
@@ -187,16 +191,18 @@ const DailyTable = (props) => {
               </StyledTableCell>
               <StyledTableCell align="center">
                 <Typography color="green" variant="overline" component="div">
-                  {writings &&
+                  {/*  {writings &&
                     numeral(getWritingsSum(writings, 'D')).format('0,0[.]00') +
-                      ' €'}
+                      ' €'} */}
+                  {getWritingsSum(writings, 'D')}
                 </Typography>
               </StyledTableCell>
               <StyledTableCell align="center">
                 <Typography color="red" variant="overline" component="div">
-                  {writings &&
+                  {/*  {writings &&
                     numeral(getWritingsSum(writings, 'C')).format('0,0[.]00') +
-                      ' €'}
+                      ' €'} */}
+                  {getWritingsSum(writings, 'C')}
                 </Typography>
               </StyledTableCell>
             </TableRow>

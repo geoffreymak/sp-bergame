@@ -138,6 +138,42 @@ const events = () => {
     }
   });
 
+  ipcMain.handle('get-writings', async (event, data) => {
+    try {
+      const writingsData = await ecritureModel.find().sort({ date: 1 }).lean();
+
+      return {
+        error: false,
+        data: JSON.stringify(writingsData)
+      };
+    } catch (error) {
+      console.log('get-writings-error', error);
+      return {
+        error: true
+      };
+    }
+  });
+
+  ipcMain.handle('correct-writing', async (event, { writings, piece }) => {
+    try {
+      if (writings && piece) {
+        await ecritureModel.deleteMany({ piece });
+        await ecritureModel.insertMany(writings);
+        return {
+          error: false
+        };
+      }
+      return {
+        error: true
+      };
+    } catch (error) {
+      console.log('correct-writing-error', error);
+      return {
+        error: true
+      };
+    }
+  });
+
   ipcMain.handle('add-devise', async (event, data) => {
     try {
       const result = await deviseModel.create(data);
@@ -251,7 +287,7 @@ const events = () => {
       const clearData = await getData(data);
       if (clearData) {
         const pdfPath = await createReport({ ...data, data: clearData });
-        console.log("pdfPath",pdfPath)
+        console.log('pdfPath', pdfPath);
         const win = new BrowserWindow({
           width: 1024,
           height: 800,

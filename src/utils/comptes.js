@@ -1,4 +1,5 @@
 /*eslint-disable */
+import { ceil } from 'lodash';
 
 export const getComptesStartsWith = (
   comptes = [],
@@ -35,7 +36,7 @@ export const getWritingsSum = (writing = [], type = 'D') => {
   return writing
     .filter((v) => v.type === type)
     .reduce((prev, curr) => {
-      return prev + parseFloat(curr.montant_total_eur);
+      return ceil(prev + ceil(curr.montant_total_eur, 2), 2);
     }, 0);
 };
 

@@ -159,14 +159,29 @@ export default function useWriting() {
     }
   }, [writings]);
 
+  const correctWriting = useCallback(
+    async (piece) => {
+      if (writings && piece) {
+        const response = await ipcRenderer.invoke('correct-writing', {
+          writings,
+          piece
+        });
+        return response;
+      }
+    },
+    [writings]
+  );
+
   return {
     writings,
     addWriting,
     removeWriting,
     addOneWriting,
+    setWritings,
     // addVariousWriting,
     setManyWriting,
     cleardWriting,
-    saveWriting
+    saveWriting,
+    correctWriting
   };
 }
