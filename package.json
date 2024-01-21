@@ -4,8 +4,8 @@
   "email": "geoffreymakia@gmail.com",
   "licence": "MIT",
   "homepage": "./",
-  "version": "1.2.1",
-  "description": "Logiciel de comptabilite des la communaute des soeurs de pauvre de bergame",
+  "version": "1.3.0",
+  "description": "Logiciel de comptabilité des la communauté des soeurs de pauvre de bergame",
   "private": false,
   "main": "public/electron.js",
   "build": {
@@ -31,8 +31,8 @@
   "scripts": {
     "eslint": "eslint ./src",
     "eslint-fix": "eslint --fix ./src",
-    "start": "react-scripts --max_old_space_size=8192 start",
-    "react-build": "react-scripts --max_old_space_size=8192 build",
+    "start": "react-scripts --max_old_space_size=8192 --openssl-legacy-provider start",
+    "react-build": "react-scripts --max_old_space_size=8192 --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./",

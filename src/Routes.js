@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable arrow-body-style */
 /* eslint-disable object-curly-newline */
 /* eslint-disable import/no-named-as-default-member */

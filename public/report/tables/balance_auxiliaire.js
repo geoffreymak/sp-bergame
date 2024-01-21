@@ -139,12 +139,7 @@ const createHtml = (table) => `
         th, td {
           padding: 5px;
         }
-        tr:nth-child(odd) {
-          background: #CCC
-        }
-        tr:nth-child(even) {
-          background: #FFF
-        }
+      
         .no-content {
           background-color: red;
         }

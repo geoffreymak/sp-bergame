@@ -36,6 +36,7 @@ import GrdLivreDialog from './GrdLivreDialog';
 import JournalDialog from './JournalDialog';
 import CashReportDialog from './CashReportDialog';
 import BudgetDialog from './BudgetDialog';
+import BilanDialog from './NewBilanDialog';
 import ProgressDialog from '../ProgressDialog';
 // import TableauCorDialog from './TableauCorDialog';
 // import ProgressDialog from '../ProgressDialog';
@@ -148,6 +149,9 @@ const ReportList = (props) => {
         break;
       case BUDGET:
         setOpenBudget(true);
+        break;
+      case BILAN:
+        setOpenBialan(true);
         break;
 
       default:
@@ -266,11 +270,13 @@ const ReportList = (props) => {
                         control={<Radio />}
                         label="Journal"
                       />
-                      {/* <FormControlLabel
-                      value={BILAN}
-                      control={<Radio />}
-                      label="Bilan"
-                    /> */}
+
+                      <FormControlLabel
+                        value={LISTE_COMPTES}
+                        control={<Radio />}
+                        label="Liste de comptes"
+                      />
+
                       {/* <FormControlLabel
                       value={TABLEAU_EXPLOITAION}
                       control={<Radio />}
@@ -279,9 +285,9 @@ const ReportList = (props) => {
                     </Stack>
                     <Stack>
                       <FormControlLabel
-                        value={LISTE_COMPTES}
+                        value={BILAN}
                         control={<Radio />}
-                        label="Liste de comptes"
+                        label="Bilan"
                       />
 
                       {/* <FormControlLabel
@@ -402,13 +408,15 @@ const ReportList = (props) => {
       />
       <ProgressDialog open={progress} onClose={() => setProgress(false)} />
 
-      {/* <BilanDialog
+      <BilanDialog
         open={openBilan}
         onClose={() => {
           setOpenBialan(false);
         }}
-        type={BILAN}
-      /> */}
+        exercice={exercice}
+        handleProgressChange={handleProgressChange}
+      />
+
       {/* <TableauExpDialog
         open={openTableauExp}
         onClose={() => {

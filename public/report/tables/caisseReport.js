@@ -76,7 +76,7 @@ const createHtml = (table) => `
           padding: 5px;
         }
         tr:nth-child(odd) {
-          background: #CCC
+          background: #FFF
         }
         tr:nth-child(even) {
           background: #FFF

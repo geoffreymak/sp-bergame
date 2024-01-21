@@ -100,8 +100,12 @@ module.exports = [
         role: 'reload',
         accelerator: 'CommandOrControl+R'
       },
+
       {
-        label: 'Version: 1.2.1'
+        label: 'Copyright © 2021 geoffreymakia@gmail.com'
+      },
+      {
+        label: 'Version: 1.3.0'
       }
     ]
   }

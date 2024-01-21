@@ -240,6 +240,49 @@ const TB_COR_VALUES = [
   }
 ];
 
+const BILAN_INCOMES_DATA = [
+  { compte: '050', empty: 0 },
+  { compte: '051', empty: 0 },
+  { compte: '052', empty: 0 },
+  { compte: '053', empty: 0 },
+  { compte: '054', empty: 0 },
+  { compte: '055', empty: 0 },
+  { compte: '056', empty: 0 },
+  { compte: '057', empty: 0 }
+];
+let BILAN_OUTPUTS_DATA = [
+  { compte: '001', empty: 0 },
+  { compte: '002', empty: 0 },
+  { compte: '003', empty: 0 },
+  { compte: '004', empty: 0 },
+  { compte: '005', empty: 0 },
+  { compte: '008', empty: 0 },
+  { compte: '009', empty: 0 },
+  { compte: '010', empty: 0 },
+  { compte: '011', empty: 0 },
+  { compte: '012', empty: 0 },
+  { compte: '030', empty: 0 },
+  { compte: '013', empty: 0 },
+  { compte: '014', empty: 1 },
+  { compte: '015', empty: 0 },
+  { compte: '007', empty: 0 },
+  { compte: '016', empty: 0 },
+  { compte: '017', empty: 0 },
+  { compte: '018', empty: 0 },
+  { compte: '019', empty: 0 },
+  { compte: '006', empty: 0 },
+  { compte: '021', empty: 0 },
+  { compte: '022', empty: 0 },
+  { compte: '023', empty: 0 },
+  { compte: '024', empty: 0 },
+  { compte: '063', empty: 1 },
+  { compte: '025', empty: 0 },
+  { compte: '026', empty: 0 },
+  { compte: '027', empty: 1 },
+  { compte: '020', empty: 0 },
+  { compte: '029', empty: 0 }
+];
+
 const MOUTHS = [
   'Janvier',
   'Février',
@@ -997,6 +1040,283 @@ const groupCompteBudget = (
   }
 
   return formatedData;
+};
+
+const getBilanData = (
+  ecritureData,
+  comptes,
+  printData,
+  field = 'compte',
+  field2 = 'compte_code'
+) => {
+  let groups = {};
+  let formatedData = [];
+
+  comptes.forEach((d) => {
+    const val = ecritureData.filter((v) => v[field2] === d[field]);
+    groups[d[field]] = { compte: d, data: val };
+  });
+
+  // //console.log('group', group);
+  for (const compte in groups) {
+    if (Object.hasOwnProperty.call(groups, compte)) {
+      const data = groups[compte].data;
+      const compt = groups[compte].compte;
+
+      const soldes = data.reduce(
+        (prev, curr) => {
+          const debit =
+            curr.type === 'D'
+              ? _.ceil(prev.debit + curr.montant_total_eur, 6)
+              : prev.debit;
+          const credit =
+            curr.type === 'C'
+              ? _.ceil(prev.credit + curr.montant_total_eur, 6)
+              : prev.credit;
+
+          return { debit, credit };
+        },
+        {
+          debit: 0,
+          credit: 0
+        }
+      );
+
+      const { debit, credit } = soldes;
+      let solde = 0;
+
+      if (compt.type === 'D') {
+        solde = debit - credit;
+      } else if (compt.type === 'C') {
+        solde = credit - debit;
+      } else {
+        solde = debit > credit ? debit - credit : credit - debit;
+      }
+
+      formatedData.push({
+        compte: compt,
+        code: compt.compte,
+        solde
+      });
+    }
+  }
+
+  let BILAN_OUTPUTS_DATA_COPY = [...BILAN_OUTPUTS_DATA];
+
+  if (printData.entite?.code === 'A') {
+    BILAN_OUTPUTS_DATA_COPY = [
+      ...BILAN_OUTPUTS_DATA_COPY,
+      {
+        compte: '062',
+        empty: 0
+      },
+      {
+        compte: '064',
+        empty: 0
+      },
+      {
+        compte: '065',
+        empty: 0
+      },
+      {
+        compte: '066',
+        empty: 0
+      },
+      {
+        compte: '067',
+        empty: 0
+      },
+      {
+        compte: '071',
+        empty: 0
+      },
+      {
+        compte: '072',
+        empty: 0
+      },
+      {
+        compte: '073',
+        empty: 0
+      }
+    ].map((d) => (d.compte === '014' ? { empty: 0, compte: '070' } : d));
+
+    BILAN_OUTPUTS_DATA_COPY.splice(
+      BILAN_OUTPUTS_DATA_COPY.findIndex((d) => d.compte === '016'),
+      0,
+      {
+        compte: '061',
+        empty: 0
+      }
+    );
+  }
+
+  const totalIncomes = BILAN_INCOMES_DATA.map(
+    (v) => formatedData.find((d) => d.code === v.compte)?.solde || 0
+  ).reduce((prev, curr) => _.ceil(curr + prev, 6), 0);
+
+  const totalOutputs = BILAN_OUTPUTS_DATA_COPY.map(
+    (v) => formatedData.find((d) => d.code === v.compte)?.solde || 0
+  ).reduce((prev, curr) => _.ceil(curr + prev, 6), 0);
+
+  let finalData = [
+    {
+      isTitle: true,
+      libelle: 'REVENUES'
+    },
+    { empty: true }
+  ];
+
+  BILAN_INCOMES_DATA.forEach((v) => {
+    const data = formatedData.find((d) => d.code === v.compte);
+
+    finalData = [
+      ...finalData,
+      {
+        code: data?.code,
+        libelle: (data?.compte?.intitule || '').toUpperCase(),
+        solde: data?.solde || 0
+      },
+      ...Array(v.empty || 0).fill({ empty: true })
+    ];
+  });
+
+  finalData = [
+    ...finalData,
+    { empty: true },
+    {
+      isTotal: true,
+      code: 'A',
+      libelle: 'TOTAL REVENUS',
+      solde: totalIncomes
+    },
+    { empty: true },
+    {
+      isTitle: true,
+      libelle: 'SORTIES'
+    },
+    { empty: true }
+  ];
+
+  BILAN_OUTPUTS_DATA_COPY.forEach((v) => {
+    const data = formatedData.find((d) => d.code === v.compte);
+    finalData = [
+      ...finalData,
+      {
+        code: data?.code,
+        libelle: (data?.compte?.intitule || '').toUpperCase(),
+        solde: data?.solde || 0
+      },
+      ...Array(v.empty || 0).fill({ empty: true })
+    ];
+  });
+
+  finalData = [
+    ...finalData,
+    { empty: true },
+    {
+      isTotal: true,
+      color: "tomato",
+      code: 'B',
+      libelle: 'TOTAL SORTIES',
+      solde: totalOutputs
+    },
+    { empty: true },
+    {
+      code: 'C',
+      libelle: 'ACTIF(+) PASSIF(-)',
+      solde: _.ceil(totalIncomes - totalOutputs, 6)
+    },
+    { empty: true },
+    {
+      code: 'D',
+      libelle: `RESTE AU 31 DÉCEMBRE ${printData?.exercice - 1}`,
+      solde: formatedData.find((d) => d.code === '060')?.solde || 0
+    },
+    {
+      code: 'E',
+      libelle: (
+        formatedData.find((d) => d.code === '058')?.compte?.intitule || ''
+      ).toUpperCase(),
+      solde: formatedData.find((d) => d.code === '058')?.solde || 0
+    },
+    {
+      code: 'F',
+      libelle: `RESUME REVENUES`,
+      solde: totalIncomes
+    },
+    printData.entite?.code === 'A'
+      ? null
+      : {
+          code: 'G',
+          libelle: (
+            formatedData.find((d) => d.code === '059')?.compte?.intitule || ''
+          ).toUpperCase(),
+          solde: formatedData.find((d) => d.code === '059')?.solde || 0
+        },
+    {
+      code: 'H',
+      libelle: `DON ÉCONOMAT GENERAL (BILLET AVION)`,
+      solde: formatedData.find((d) => d.code === '055')?.solde || 0
+    }
+  ].filter((d) => !!d);
+
+  finalData = [
+    ...finalData,
+    { empty: true },
+    {
+      isTotal: true,
+      code: 'I',
+      libelle: 'TOTAL REVENUES',
+      solde: ['D', 'E', 'F', 'G', 'H']
+        .map((v) => finalData.find((d) => d.code === v)?.solde || 0)
+        .reduce((prev, curr) => _.ceil(curr + prev, 6), 0)
+    },
+    // { empty: true },
+    // printData.entite?.code !== 'A'
+    //   ? {
+    //       code: 'J',
+    //       libelle: 'DONNE A LA PROVINCE',
+    //       solde: formatedData.find((d) => d.code === '029')?.solde || 0
+    //     }
+    //   : null,
+    // {
+    //   code: 'K',
+    //   libelle: `RESUME SORTIES`,
+    //   solde: totalOutputs
+    // },
+    //{ empty: true }
+  ].filter((d) => !!d);
+
+  finalData = [
+    ...finalData,
+    {
+      isTotal: true,
+      color: "tomato",
+      code: 'L',
+      libelle: 'TOTAL SORTIES',
+       solde: totalOutputs
+      // solde: ['J', 'K']
+      //   .map((v) => finalData.find((d) => d.code === v)?.solde || 0)
+      //   .reduce((prev, curr) => _.ceil(curr + prev, 6), 0)
+    },
+    { empty: true }
+  ];
+
+  finalData = [
+    ...finalData,
+    {
+      isTotal: true,
+      code: 'M',
+      libelle: `RESTE AU 31 DÉCEMBRE ${printData?.exercice}`,
+      solde: _.ceil(
+        (finalData.find((d) => d.code === 'I')?.solde || 0) -
+          (finalData.find((d) => d.code === 'L')?.solde || 0),
+        6
+      )
+    }
+  ];
+
+  return finalData;
 };
 const groupJournalDetailed = (
   ecritureData,
@@ -3521,6 +3841,7 @@ module.exports = {
   getCompteSum,
   groupJournalDetailed2,
   groupCompteBilan,
+  getBilanData,
   getCompteSumBilan,
   groupCompteByCls,
   getResultCompte,

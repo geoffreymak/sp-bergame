@@ -185,7 +185,7 @@ const createHtml = (table) => `
           padding: 5px;
         }
         tr:nth-child(odd) {
-          background: #ccc;
+          background: #FFF;
         }
         tr:nth-child(even) {
           background: #fff;

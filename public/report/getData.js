@@ -25,8 +25,8 @@ const {
   groupCompteDaily,
   getRangeCompte,
   groupCompteBudget,
-  groupJournalDetailed2
-
+  groupJournalDetailed2,
+  getBilanData
   // groupJournalDetailed,
   // getUniqueCompte,
   // groupCompteBilan,
@@ -59,6 +59,7 @@ const CASH_REPORT_DAY = 'cash_report_day';
 const CASH_REPORT_MOUTH = 'cash_report_mouth';
 const BUDGET_MONTH = 'budget_month';
 const BUDGET_YEAR = 'budget_year';
+const BILAN = 'bilan';
 
 const getData = async (data) => {
   const comptesData = await compteModel.find().sort({ compte: 1 }).lean();
@@ -158,6 +159,25 @@ const getData = async (data) => {
 
       return clearData;
     }
+
+    case BILAN: {
+      const finalEcritureData = ecritureData.filter(
+        (e) => e.compte?.slice(1, 2) === data.entite?.code
+      );
+
+      console.log('entite => ', data.entite);
+
+      const clearData = getBilanData(
+        finalEcritureData,
+        comptesData,
+        data,
+        'compte',
+        'compte_code'
+      );
+
+      return clearData;
+    }
+
     case BUDGET_YEAR:
     case BUDGET_MONTH: {
       const budgetsData = await finalBudgetModel
