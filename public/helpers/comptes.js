@@ -1102,6 +1102,7 @@ const getBilanData = (
   }
 
   let BILAN_OUTPUTS_DATA_COPY = [...BILAN_OUTPUTS_DATA];
+  let BILAN_INCOMES_DATA_COPY = [...BILAN_INCOMES_DATA];
 
   if (printData.entite?.code === 'A') {
     BILAN_OUTPUTS_DATA_COPY = [
@@ -1140,6 +1141,18 @@ const getBilanData = (
       }
     ].map((d) => (d.compte === '014' ? { empty: 0, compte: '070' } : d));
 
+    BILAN_INCOMES_DATA_COPY = [
+      ...BILAN_INCOMES_DATA_COPY,
+      {
+        compte: '150',
+        empty: 0
+      },
+      {
+        compte: '151',
+        empty: 0
+      }
+    ];
+
     BILAN_OUTPUTS_DATA_COPY.splice(
       BILAN_OUTPUTS_DATA_COPY.findIndex((d) => d.compte === '016'),
       0,
@@ -1150,7 +1163,7 @@ const getBilanData = (
     );
   }
 
-  const totalIncomes = BILAN_INCOMES_DATA.map(
+  const totalIncomes = BILAN_INCOMES_DATA_COPY.map(
     (v) => formatedData.find((d) => d.code === v.compte)?.solde || 0
   ).reduce((prev, curr) => _.ceil(curr + prev, 6), 0);
 
@@ -1166,7 +1179,7 @@ const getBilanData = (
     { empty: true }
   ];
 
-  BILAN_INCOMES_DATA.forEach((v) => {
+  BILAN_INCOMES_DATA_COPY.forEach((v) => {
     const data = formatedData.find((d) => d.code === v.compte);
 
     finalData = [
@@ -1215,7 +1228,7 @@ const getBilanData = (
     { empty: true },
     {
       isTotal: true,
-      color: "tomato",
+      color: 'tomato',
       code: 'B',
       libelle: 'TOTAL SORTIES',
       solde: totalOutputs
@@ -1270,7 +1283,7 @@ const getBilanData = (
       solde: ['D', 'E', 'F', 'G', 'H']
         .map((v) => finalData.find((d) => d.code === v)?.solde || 0)
         .reduce((prev, curr) => _.ceil(curr + prev, 6), 0)
-    },
+    }
     // { empty: true },
     // printData.entite?.code !== 'A'
     //   ? {
@@ -1291,10 +1304,10 @@ const getBilanData = (
     ...finalData,
     {
       isTotal: true,
-      color: "tomato",
+      color: 'tomato',
       code: 'L',
       libelle: 'TOTAL SORTIES',
-       solde: totalOutputs
+      solde: totalOutputs
       // solde: ['J', 'K']
       //   .map((v) => finalData.find((d) => d.code === v)?.solde || 0)
       //   .reduce((prev, curr) => _.ceil(curr + prev, 6), 0)

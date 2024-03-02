@@ -275,7 +275,8 @@ function BilanDialog(props) {
               entite,
               exercice: exercice?.code,
               noSubtitle: true,
-              smallTitle: true
+              smallTitle: true,
+              customDevise: 'EUR (€)'
             };
             handleProgressChange(true);
             await ipcRenderer.invoke('print', printData);

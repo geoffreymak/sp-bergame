@@ -105,7 +105,7 @@ module.exports = [
         label: 'Copyright © 2021 geoffreymakia@gmail.com'
       },
       {
-        label: 'Version: 1.3.0'
+        label: 'Version: 1.3.1'
       }
     ]
   }

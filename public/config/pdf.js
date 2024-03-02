@@ -125,9 +125,9 @@ module.exports = (data, smallTitle = false) => {
                 </div>
                 <div class="">
                   ${
-                    data.devise
+                    data.customDevise
                       ? ` <span class="right-label">Devise:</span>
-            <span class="">${getCurrency(data.devise)}</span>`
+            <span class="">${data.customDevise}</span>`
                       : ''
                   }
                 </div>
